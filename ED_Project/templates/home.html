@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Code</title>
+    <style>
+        body {
+            background-color: #333; 
+            color: #fff; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 70px;
+            margin-bottom: 50px;
+            margin-top: 120px;
+        }
+
+        p {
+            font-size: 1em;
+            color: lightblue;
+            text-align: center;
+            margin-bottom: 90px;
+            margin-right: 300px;
+            margin-left: 300px;
+        }
+
+        #ED_button {
+            display: flex;
+            justify-content: center;
+        }
+
+        #button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 50px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 25px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #button:hover {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <h1>Generate Your Secret Code</h1>
+    <p>
+        Establishing a secure communication system involves creating a secret code language. 
+        The encoder converts messages into unreadable code, requiring a decoder to decrypt and reveal the original information.
+        This cryptographic technique enhances confidentiality, making it essential to use the decoder for deciphering. 
+        In summary, a secret code language safeguards information, requiring the appropriate decoding mechanism for comprehension.
+    </p>
+        
+    <div id="ED_button">
+        <a onclick="gotoEncoder()" id="button">Encoder</a>
+        <a onclick="gotoDecoder()" id="button">Decoder</a>
+        <button onclick="logout()"> logout</button>
+    </div>
+
+    <script>
+        function logout(){
+            window.location.href = "userlogout";
+        }
+
+        function gotoEncoder() {
+            window.location.href = "encoder"; 
+        }
+
+        function gotoDecoder() {
+            window.location.href = "decoder"; 
+        }
+    </script>
+
+</body>
+</html>
